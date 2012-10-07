@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+#nav {list-style: none; padding-top: 35px; height: 10%; padding-bottom: 22px; margin-bottom: 0%; }
+#nav li {display: inline; margin-right: 4%;font-size: 23px;  
+	font-family: Arial; color: #fff;}
+	
+#bro
+{
+	margin-left: 5%;
+	margin-right: 6%;
+	float:left; 
+}
+#div3{
+	background-image: url("limages/city.jpg");
+	background-size: 100%;
+	height:100%;
+	background-repeat: no-repeat;
+	padding-bottom: 55px;
+
+}
+#divi{
+	background-color: #000;
+	background-size: 100%;
+	height:100%;
+	padding-bottom:20px;
+	
+	padding-left: 20%;
+	padding-top: 40px;
+
+}
+#nav2{list-style:none;}
+#nav2 li {display: inline;margin-right: 1%;}
+
+
+
+footer{
+	
+	padding-bottom: 20px;
+	background-color: #DDD;
+	position: relative;
+    clear: both;
+    width:100%;
+
+   
+}
+	
+.login{
+	float: right;
+	font-size: 25px;
+	padding-right: 5px;
+	margin: 0% 1% ;
+}
+.footer{
+	position:absolute;
+    bottom:0;
+}

@@ -1,0 +1,38 @@
+<h2>Sign up</h2>
+<div class="sign-main">
+
+<div class="siginup">
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div><%= f.label :name %>
+  <%= f.text_field :name %></div>
+
+  <div><%= f.label :email %>
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %>
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+<%= render "devise/shared/links" %>
+	
+</div><!-- end of siginup class -->
+<div class="info-signup">
+	<h3 class="why-signup">why sign up </h3>
+	<ul class="list-signup">
+		<li>share cool Pics with the car community </li>
+		<li>Meet new people with like you </li>
+		<li>Show off your pictures </li>
+		<li>Talk about your cars </li>
+		<li>Build A following </li>
+		<li>Plus more </li>
+	</ul>
+
+</div>
+
+</div>

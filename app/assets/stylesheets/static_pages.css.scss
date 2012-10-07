@@ -1,0 +1,35 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#button{
+	float: right;
+	margin-top: -1%;
+	margin-right: 8%;
+}
+.thumbnail {
+	width: 300px;
+	height: 260px;
+	padding-left: 10px;
+	float: left;
+	margin: 1% 1.5%;
+}
+
+a:hover {text-decoration:none;}
+
+.crew{
+	
+	margin-left: 13.75%;
+	margin-top: 2%;
+
+
+
+}
+
+b{
+	color: #000;
+}
+/* p tag for terms and about us privacy*/
+.pterms{
+	padding-right: 20px;
+}

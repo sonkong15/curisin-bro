@@ -1,0 +1,9 @@
+---
+:User:
+  :avatar:
+  - :small
+:Post:
+  :picture:
+  - :large
+  - :small
+  - :thumb

@@ -1,0 +1,16 @@
+class Post < ActiveRecord::Base
+  # attr_accessible :title, :body
+  belongs_to :user
+  attr_accessible :title, :picture, :text, :link
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
+
+  has_attached_file :picture, :styles => {:thumb => "149x116#", :small => "200x160#", :large => "600x500>"}
+
+  	validates :title, presence: true
+
+    validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+
+	validates_attachment_size :picture, :less_than => 4.megabyte
+end

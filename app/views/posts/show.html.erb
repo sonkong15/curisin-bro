@@ -1,0 +1,21 @@
+<div class="pshow-main">
+	<div class="up-ad">
+
+	</div>
+	
+</div>
+<div class="main2-show">
+	<div class="h2-title">
+		<h2 class="h2-show"><%= @post.title %></h2>
+	</div>
+	<div class="show-pic">
+		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
+	</div>
+	<div class="show-user">
+		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
+	</div>
+	<div class="show-text">
+		<h4><%= @post.text %></h4>
+	</div>
+	
+</div>

@@ -1,0 +1,32 @@
+<div class="posts-h2">
+	<h2>Explore Cars Bikes Trucks </h2>
+</div>
+<div class="add-post">
+<%= form_for @post, :multipart => true, :class => 'form-horizontal'  do |p| %>
+<%= p.label :title, :class => "post-label" %>
+<%= p.text_field :title %>
+<%= p.file_field :picture, :class => "post-upload" %>
+<div class="post-upload">
+<%= p.label "link(opcenal)"%>
+<%= p.text_field :link  %>
+</div>
+<%= p.label :desrition %>
+<%= p.text_area :text, :rows => 2, :style => "width: 500px"  %>
+<%= p.submit "add post", class: "btn btn-large btn-inverse post-upload" %>
+<% end %>
+</div>
+<div>
+	<% @posts.each do |post| %>
+<table class=<%=cycle("post-table", "post-table2")%>>
+	<CAPTION><h3><%= post.title %></h3></CAPTION>
+<tr>
+<td><%= link_to image_tag(post.picture.url(:small)), post %></td>
+<td class="tb-text"><%= post.text %></td>
+</tr>
+
+<th class= "tb-link"> <b>Link</b> <a href= "http://<%= post.link %> " target = "_blank"><%= post.link %></a></th>
+
+
+</table>
+<% end %>
+</div>

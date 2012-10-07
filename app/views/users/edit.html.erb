@@ -1,0 +1,59 @@
+<% @title = 'Edit' %>
+<div class="edit-boreder">
+	<h1 style="color: #ddd; margin: 20px 0px 0px 12%;">Editing <%= @user.name.capitalize %> profile </h1>
+	<div class="edit-page">
+	 <h2> Name & Email </h2>
+	 <div class="edit-line"></div>
+
+	    <%= form_for @user, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+	      <p>
+	      <b><%= f.label :name %></b>
+		  <%= f.text_field :name, :disabled => true,  :class => "span3 font"  %>
+		  </p><br />
+		  <p>
+		  <%= f.label :email %>
+		  <%= f.email_field :email,  :class => "span4 font"  %>
+		  </p><br />
+		  <div class="avatar">
+		  <%= f.label :avatar %>
+		  <%= f.file_field :avatar %>
+		  </div>
+		  <h2> About Me </h2>
+		  <div class="about-line"></div>
+		  <%= f.label :Bio %>
+		  <%= f.text_area :bio, :rows => 5, :class => "span4 font"  %>
+		  <h2> Links </h2>
+		  <div class="about-line"></div>
+		  <p>
+		  <%= f.label :facebook_link %>
+		  <%= f.text_field :facebook_link, :class => "span4 font"  %>
+		  </p>
+		  <p>
+		  <%= f.label :website_link %>
+		  <%= f.text_field :website_link, :class => "span4 font"  %>
+		  </p>
+		  <% if @user.id == 1 %>
+		  <%= f.check_box :admin %>
+		  <% end %>
+		  <h2>change your password</h2>
+		  <div class="about-line"></div>
+		  <p>
+		  <%= f.label :password %>
+		  <%= f.password_field :password, :class => "span3 font"  %>
+		  <p>
+		  
+		  <p>
+		  <%= f.label :password_confirmation %>
+		  <%= f.password_field :password_confirmation, :class => "span3" %>
+		  </p><br />
+	 	        <p>  
+	 	  	<%= f.submit "Save changes", class: "btn btn-large btn-inverse " %>
+	 	  	</p>
+
+	    <% end %>
+		
+	</div>
+	
+		
+	
+</div>

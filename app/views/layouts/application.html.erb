@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--{if it IE 9}>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <!{endif}-->
+
+</head>
+<body>
+  
+  <header>
+    
+	<%= link_to image_tag("limages/bro.png"), "/", {:id=> "bro" } %>
+  
+    
+  
+
+	<div style= 'margin-left: 20%; background-color: #000;'>
+		<ul id= "nav">
+      <li><%= link_to "Explore", posts_url %></li>
+      <li><%= link_to"Garage", "#" %></li>
+      <li><%= link_to "Events", "#" %></li>
+      <li><%= link_to "Forums", "#" %></li>
+      <% if user_signed_in? %>
+      <li id="fat-menu" class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
+      <ul class= "dropdown-menu" role="menu" aria-labelledby="dlabel">
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Upload Pic", "#" %></li>
+        <li><%= link_to "settings", edit_user_path(current_user) %></li>
+        <li><%= link_to "Help Page", help_path %></li>
+      </ul>
+      <%= link_to "sign out", destroy_user_session_url, :class =>"btn btn-large btn-danger", id: "button" %>
+      <% else %>
+      <%= link_to "sign up", new_user_registration_url, :class =>"btn btn-large btn-danger", id: "button" %>
+      <%= link_to "Login", new_user_session_url, { :class => "login "} %>
+    	
+      <% end %>
+	    </ul>
+
+    </div> 
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"> <%= value %></div>
+    <% end %>
+
+</header>
+<%= yield %>
+
+
+<%# debug(params) if Rails.env.development? %>
+</body>
+</html>

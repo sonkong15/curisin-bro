@@ -1,0 +1,14 @@
+development:
+  bucket: pikcam-dev
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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
+
+test:
+  bucket: pikcam-test
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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
+
+production:
+  bucket: bro.cruisinbro.com
+  access_key_id: AKIAJMHSRAY4L3DJKNPQ
+  secret_access_key: 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
