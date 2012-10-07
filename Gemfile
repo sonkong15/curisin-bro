@@ -22,6 +22,14 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
+  
+  gem 'uglifier', '>= 1.0.3'
+  
+end
+
+group :production do
+  gem "thin"
+  gem 'pg'
   gem 'devise'
   gem 'acts-as-taggable-on', '~> 2.3.1'
   gem "paperclip"
@@ -30,11 +38,7 @@ group :assets do
   gem "friendly_id", "~> 4.0.1"
   gem "cancan"
   gem 'kaminari'
-  gem 'uglifier', '>= 1.0.3'
-  
 end
-
-
 
 
 
