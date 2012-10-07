@@ -38,6 +38,7 @@ group :production do
   gem "friendly_id", "~> 4.0.1"
   gem "cancan"
   gem 'kaminari'
+  gem "cocaine", "0.3.2"
 end
 
 
