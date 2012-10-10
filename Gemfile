@@ -22,7 +22,15 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  
+  gem 'devise'
+  gem 'acts-as-taggable-on', '~> 2.3.1'
+  gem "paperclip"
+  gem 'bootstrap-sass', '~> 2.0.0'
+  gem "aws-sdk", "~> 1.6.5"
+  gem "friendly_id", "~> 4.0.1"
+  gem "cancan"
+  gem 'kaminari'
+  gem "cocaine", "0.3.2"
   gem 'uglifier', '>= 1.0.3'
   
 end
