@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
   devise_for :users 
+  resources :users
+
 
 resources :posts
   match "/about", to: "static_pages#about"
