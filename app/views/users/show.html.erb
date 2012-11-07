@@ -1,1 +1,26 @@
-<h2> hello <%= current_user.name %></h2>
+<div class="user-background">
+	<div class="show-main">
+		<div class="user-block">
+			<table>
+				<tr>
+				<td><img src="<%= @user.image %>"></td>
+				<td><h3><%= @user.name %></h3></td>
+				</tr>
+			</table>
+
+		</div>
+		<div class="my-garage" >
+
+
+		</div>
+		<div class="user-post">
+
+		</div>
+
+		<div class="user-post">
+
+		</div>
+
+	</div>
+	<%= render "layouts/footer"%>
+</div>

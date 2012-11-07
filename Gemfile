@@ -32,7 +32,10 @@ group :assets do
   gem 'kaminari'
   gem "cocaine", "0.3.2"
   gem 'uglifier', '>= 1.0.3'
-  
+  gem 'omniauth'
+  gem 'omniauth-facebook'
+  gem 'oauth2'
+  gem 'pg'
 end
 
 group :production do

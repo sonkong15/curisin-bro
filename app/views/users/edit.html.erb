@@ -35,17 +35,24 @@
 		  <% if @user.id == 1 %>
 		  <%= f.check_box :admin %>
 		  <% end %>
+		  
+		 
+		  <% unless @user.uid.empty? %>
+		  <h2> you're using Facebook </h2>
+		   <div class="about-line"></div>
+		  <% else %>
 		  <h2>change your password</h2>
-		  <div class="about-line"></div>
+		   <div class="about-line"></div>
 		  <p>
 		  <%= f.label :password %>
 		  <%= f.password_field :password, :class => "span3 font"  %>
-		  <p>
-		  
+		  </p>
 		  <p>
 		  <%= f.label :password_confirmation %>
 		  <%= f.password_field :password_confirmation, :class => "span3" %>
 		  </p><br />
+		  <% end %>
+
 	 	        <p>  
 	 	  	<%= f.submit "Save changes", class: "btn btn-large btn-inverse " %>
 	 	  	</p>
