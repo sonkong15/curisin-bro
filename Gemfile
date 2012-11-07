@@ -50,6 +50,10 @@ group :production do
   gem "cancan"
   gem 'kaminari'
   gem "cocaine", "0.3.2"
+  gem 'omniauth'
+  gem 'omniauth-facebook'
+  gem 'oauth2'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 
