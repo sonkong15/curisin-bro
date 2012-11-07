@@ -53,7 +53,6 @@ group :production do
   gem 'omniauth'
   gem 'omniauth-facebook'
   gem 'oauth2'
-  gem 'uglifier', '>= 1.0.3'
 end
 
 
