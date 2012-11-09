@@ -45,13 +45,53 @@ class User < ActiveRecord::Base
   end
   user
 	end
-	def self.new_with_session(params, session)
+  def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
       end
-   		end
-  	end
+   	end
+  end
+
+
+   private 
+
+  def self.find_or_create_from_oauth(auth_hash)
+    provider = auth_hash["provider"]
+    uid = auth_hash["uid"]
+    case provider
+      when 'facebook'
+        if user = self.find_by_email(auth_hash["info"]["email"])
+          user.update_user_from_facebook(auth_hash)
+          return user
+        elsif user = self.find_by_facebook_uid(uid)
+          return user
+        else
+          return self.create_user_from_facebook(auth_hash)
+        end
+    end
+  end
+  def self.create_user_from_facebook(auth_hash)
+    sign_in @user, :bypass => true
+    self.create({
+      :uid => auth_hash["uid"],
+      :name => auth_hash["info"]["name"],
+      :image => auth_hash["info"]["image"],
+      :email => auth_hash["info"]["email"],
+      location:auth.info.location,
+      password:Devise.friendly_token[0,20]
+      
+    })
+  end
+  def update_user_from_facebook(auth_hash)
+    sign_in @user, :bypass => true
+    self.update_attributes({
+      provider:auth.provider,
+      :uid => auth_hash["uid"],
+      :image => auth_hash["info"]["image"],
+    })
+  end
+
 end
 
 
