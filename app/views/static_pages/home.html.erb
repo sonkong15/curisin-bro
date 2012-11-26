@@ -2,18 +2,20 @@
 <!--this is just for now will make a css page and make a div id -->
 
 <div id = "divi">
-<%= image_tag "limages/here.png"%>
-<h3>Site in testing and Development like us for updates </h3>
-<div class="fb-like" data-href="https://www.facebook.com/pages/Cruisin-Bro/426252127422742" data-send="true" data-width="450" data-show-faces="false"></div>
+	<div class="divfor-title">
+		<%= image_tag "limages/here.png"%>
+			<h3>Site in testing and Development like us for updates </h3>
+		<div class="fb-like" data-href="https://www.facebook.com/pages/Cruisin-Bro/426252127422742" data-send="true" data-width="450" data-show-faces="false"> </div>
+
+	</div>
 </div>
 
 <div id = "div3">
-<div style= " width: 940px; height: 510px;
-margin-left: 18.5%; margin-top: 0%;  " >
-<iframe width="800" height="494" src="http://www.youtube.com/embed/ahONPZJG_94?rel=0" frameborder="0" allowfullscreen></iframe>
+	<div class= "home-div2 " >
+		<iframe width="800" height="494" src="http://www.youtube.com/embed/ahONPZJG_94?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
 </div>
-
-</div>
+<div class=" mainbox-2">
 <h1 style= "margin-left: 32%; font-family: Arial">"Drivin with no where to go, we just Cruisin Bro!"</h1>
 
 	<%= render "layouts/features" %>
@@ -30,5 +32,5 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 	</div>
-	
+</div>
 	<%= render "layouts/footer"%>

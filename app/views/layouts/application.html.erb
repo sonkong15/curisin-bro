@@ -40,7 +40,7 @@
     
   
 
-	<div style= 'margin-left: 20%; background-color: #000;'>
+	<div class = 'nav-1'>
 		<ul id= "nav">
       <li><%= link_to "Explore", posts_url %></li>
       <li><%= link_to"Garage", "#" %></li>
@@ -57,8 +57,7 @@
       </ul>
       <%= link_to "sign out", destroy_user_session_url,:method => :delete %>
       <% else %>
-      <%= link_to "Sign in w/Facebook", user_omniauth_authorize_path(:facebook), :class =>"btn btn-large btn btn-primary", id: "button" %>
-      <%= link_to "sign up", new_user_registration_url %>
+      <%= link_to "sign up", new_user_registration_url, { :class => "login "} %>
       <%= link_to "Login", new_user_session_url, { :class => "login "} %>
     	
       <% end %>
