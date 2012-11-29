@@ -8,7 +8,10 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id]) 
+		@user_post = @user.posts.order("created_at DESC")
+		@user_video = @user.videos.order("created_at DESC")
 	end
+
 	def edit
 		@user = User.find(params[:id])
 		authorize! :update, @user 

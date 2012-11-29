@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
 	def index
-		@posts = Post.order("created_at DESC")
 		@post = Post.new
+		if params[:tag]
+			@posts = Post.tagged_with(params[:tag]).page(params[:page]).per(15)
+			else
+			@posts = Post.order("created_at DESC").page(params[:page]).per(10)
+		end
+		
 	end
 	def show
 		@post = Post.find(params[:id])

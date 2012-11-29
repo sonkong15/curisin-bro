@@ -1,0 +1,22 @@
+<div class="add-post">
+<%= form_for @video, :class => 'form-horizontal'  do |p| %>
+<%= p.label :title, :class => "post-label" %>
+<%= p.text_field :title %>
+<div class="post-upload">
+<%= p.label "link(opcenal)"%>
+<%= p.text_field :link  %>
+</div>
+<%= p.label :tag_list, "Tags (separated by commas)", :class => "post-tag" %>
+<%= p.text_field :tag_list, :class => "post-tag"  %>
+<div id="youtube">
+<%= p.label :youtube_url, :style => "display: inline;" %>
+<%= p.text_field :youtube %>
+</div>
+<div id="vimeo">
+<%= p.label :vimeo_url, :style => "display: inline;" %>
+<%= p.text_field :vimeo %>
+</div>
+<%= p.submit "add post", class: "btn btn-large btn-inverse post-upload" %>
+<% end %>
+</div>
+<% else %>

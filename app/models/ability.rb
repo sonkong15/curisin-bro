@@ -9,10 +9,17 @@ class Ability
        can :manage, :all
     else
       can :read, :all
-    end
+    
     can :manage, User do |us|
         us.id == user.id 
       end
+        can :manage, Post do |post|
+        post.try(:user) == user
+      end
+      can :manage, Video do |video|
+        video.try(:user) == user
+        end
+    end
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are

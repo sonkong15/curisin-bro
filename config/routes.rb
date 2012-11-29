@@ -1,8 +1,9 @@
 SampleApp::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } 
   resources :users
-
-
+  get 'tags_video/:tag', to: 'videos#index', as: :tag_video
+  get 'tags/:tag', to: 'posts#index', as: :tag
+resources :videos
 resources :posts
   match "/about", to: "static_pages#about"
   match "/help", to: "static_pages#help"

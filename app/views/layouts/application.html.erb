@@ -43,9 +43,9 @@
 	<div class = 'nav-1'>
 		<ul id= "nav">
       <li><%= link_to "Explore", posts_url %></li>
-      <li><%= link_to"Garage", "#" %></li>
-      <li><%= link_to "Events", "#" %></li>
-      <li><%= link_to "Forums", "#" %></li>
+      <li><%= link_to"videos", videos_url %></li>
+      <li><%= link_to "photos", posts_url  %></li>
+      <li><%# link_to "Forums", "#" %></li>
       <% if user_signed_in? %>
       <li id="fat-menu" class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>

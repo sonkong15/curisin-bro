@@ -1,9 +1,10 @@
 class Post < ActiveRecord::Base
   # attr_accessible :title, :body
   belongs_to :user
-  attr_accessible :title, :picture, :text, :link
+  attr_accessible :title, :picture, :text, :link, :tag_list
   extend FriendlyId
   friendly_id :title, use: :slugged
+  acts_as_taggable
 
 
   has_attached_file :picture, :styles => {:thumb => "149x116#", :small => "200x160#", :large => "600x500>"},

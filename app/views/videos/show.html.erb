@@ -1,4 +1,4 @@
-<% provide(:title, @post.title)%>
+<% provide(:title, @video.title)%>
 <div class="mainmain">
 <div class="pshow-main">
 	<div class="up-ad">
@@ -23,28 +23,26 @@
 
 	<div class="s-main">
 	<div class="h2-title">
-		<h2 class="h2-show"><%= @post.title %></h2>
+		<h2 class="h2-show"><%= @video.title %></h2>
 	</div>
 	<div class="show-pic">
-		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
+		<%=  @video.vimeo_html %>
+		<%=  @video.youtube_html %>
 	</div>
 	<div class="show-user">
-		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
+		<h4> Profile: <%= @video.user.name.capitalize %> | link: <a href= "http://<%= @video.link %> " target = "_blank"><%= @video.link %></a></h4>
 	</div>
 	<div class="show-text">
-		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
+		<h4>Tags: <%= raw @video.tag_list.map {|t| link_to t, tag_video_path(t)}.join(', ') %></h4>
 		
 	</div>
 
-	<div class="post-text">
-		<h2> Description: </h2>
-		<h4><%= @post.text %></h4>
-	</div>
-	<% if can? :destroy, @post %>
-  			<%= link_to "Edit", edit_post_path(@post) %>   
+	
+	<% if can? :destroy, @video %>
+  			<%= link_to "Edit", edit_video_path(@video) %>   
 		<% end %>
-		<% if can? :destroy, @post %>
-    		<%= link_to "Destroy", @post, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+		<% if can? :destroy, @video %>
+    		<%= link_to "Destroy", @video, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
     		<span><strong>Only you can see this</strong></span>
   		<% end %>
 	</div>

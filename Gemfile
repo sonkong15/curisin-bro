@@ -36,6 +36,8 @@ group :assets do
   gem 'omniauth-facebook'
   gem 'oauth2'
   gem 'pg'
+  gem 'acts-as-taggable-on', '~> 2.3.1'
+  gem "auto_html", "~> 1.6.0"
 end
 
 group :production do
@@ -53,6 +55,8 @@ group :production do
   gem 'omniauth'
   gem 'omniauth-facebook'
   gem 'oauth2'
+  gem 'acts-as-taggable-on', '~> 2.3.1'
+  gem "auto_html", "~> 1.6.0"
 end
 
 

@@ -1,0 +1,15 @@
+<div class="add-post">
+<%= form_for @post, :multipart => true, :class => 'form-horizontal'  do |p| %>
+<%= p.label :title, :class => "post-label" %>
+<%= p.text_field :title %>
+<%= p.file_field :picture, :class => "post-upload" %>
+<div class="post-upload">
+<%= p.label "link(opcenal)"%>
+<%= p.text_field :link  %>
+</div>
+<%= p.label :tag_list, "Tags (separated by commas)", :class => "post-tag" %>
+<%= p.text_field :tag_list, :class => "post-tag"  %>
+<%= p.label :desrition, :style => "display: inline;" %>
+<%= p.text_area :text, :rows => 2, :style => "width: 400px"  %>
+<%= p.submit "add edited post", class: "btn btn-large btn-inverse post-upload" %>
+<% end %>
