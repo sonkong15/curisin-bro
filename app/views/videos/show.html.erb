@@ -43,7 +43,7 @@
 		<h4> Profile: <%= @video.user.name.capitalize %> | link: <a href= "http://<%= @video.link %> " target = "_blank"><%= @video.link %></a></h4>
 	</div>
 	<div class="show-text">
-		<h4>Tags: <%= raw @video.tag_list.map {|t| link_to t, tags_video_path(t)}.join(', ') %></h4>
+		<h4>Tags: <%= raw @video.tag_list.map {|t| link_to t, tag_video_path(t)}.join(', ') %></h4>
 		
 	</div>
 

@@ -57,10 +57,11 @@
 <table class=<%=cycle("post-table", "post-table2")%>>
 	<CAPTION><h3><%= post.title %></h3></CAPTION>
 <tr>
-<td><%= link_to image_tag(post.picture.url(:small)), post %></td>
+<td><%= link_to image_tag(post.picture.url(:large)), post %></td>
+</tr>
+<tr>
 <td class="tb-text"><%= post.text %></td>
 </tr>
-
 <th class= "tb-link"> <b>Link</b> <a href= "http://<%= post.link %> " target = "_blank"><%= post.link %></a></th>
 
 </div>
