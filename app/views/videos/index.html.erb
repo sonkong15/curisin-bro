@@ -1,7 +1,7 @@
 <div class="posts-h2">
 	<h2>Explore Cars Bikes Trucks videos </h2>
 </div>
-<% if user.admin %>
+<% if current_user.admin? %>
 <div class="add-post">
 <%= form_for @video, :multipart => true, :class => 'form-horizontal'  do |p| %>
 <%= p.label :title, :class => "post-label" %>
