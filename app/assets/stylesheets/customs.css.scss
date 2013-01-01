@@ -20,7 +20,7 @@
     -moz-border-radius-topright: 10px; 
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-top-left-radius: 0px;
+    border-top-left-radius: 0px; 
 }
 .why-signup{
 	float: left;
@@ -423,4 +423,37 @@ margin: 10px 0px 10px 0px;
 }
 .big-box{
 	margin: 30px;
+}
+.home-pictures{
+	width: 250px;
+	height: 210px;
+}
+.home-title{
+	background-color: black;
+}
+.post-table3{
+	background-color: #DDD;
+	margin: 15px 0px 335px 0%;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	-webkit-box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
+	-moz-box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
+	box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
+}
+.line-ad{
+	position: absolute;
+	border: 2px solid;
+	width: 336px;
+	height: 280px;
+	margin: -1334px 0px 0px 157px
+}
+.bottom-ad{
+	margin: 5px auto;
+
 }

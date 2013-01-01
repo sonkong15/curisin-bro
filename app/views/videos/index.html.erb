@@ -1,7 +1,7 @@
 <div class="posts-h2">
 	<h2>Explore Cars Bikes Trucks videos </h2>
 </div>
-<% if user_signed_in? %>
+<% if user.admin %>
 <div class="add-post">
 <%= form_for @video, :multipart => true, :class => 'form-horizontal'  do |p| %>
 <%= p.label :title, :class => "post-label" %>
@@ -24,7 +24,7 @@
 <% end %>
 </div>
 <% else %>
-<p class="make_account">Must make a account to add video </p>
+<p class="make_account">comming soon user adding videos </p>
 <% end %>
 <div class=" big-box">
 	<div class="mainpost-box">
