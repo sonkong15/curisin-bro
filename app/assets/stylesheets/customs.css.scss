@@ -412,7 +412,6 @@ background-image: -webkit-gradient(
   width: 395px;
   line-height: 1.6em;
   height: 306px;
-  border: 3px solid black;
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
@@ -494,4 +493,9 @@ background-image: -webkit-gradient(
 }
 .knowd{
 	margin: 0px -74px 0px 0px;
+}
+.photoback{
+	background-image: image_url("limages/photoback.jpg");
+	background-attachment: fixed;
+	width: 100%;
 }

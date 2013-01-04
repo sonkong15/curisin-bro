@@ -1,6 +1,5 @@
 class VideosController < ApplicationController
 	def index
-		@users = User.all
 		@video = Video.new
 		if params[:tag]
 			@videos = Video.tagged_with(params[:tag]).page(params[:page]).per(5)
