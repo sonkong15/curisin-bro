@@ -32,19 +32,33 @@
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 	</div>
-	<div class="next-buttom">
+	
+	<div class="s-main">
+	<div class="h2-title">
+		<h2 class="h2-show"><%= @post.title %></h2>
+	</div>
+	<div class="show-pic">
+		<div class="next-buttom">
 			<ul>
 				<li class="next-box"><%= link_to("Previous Pic", @post.next_upload, :class => "")  if @post.next_upload %></li>
 				<li class="next-box"><%= link_to("Next Pic", @post.previous_upload,:class => "") if @post.previous_upload %></li>
 
 			</ul>
 		</div>		
-	<div class="s-main">
-	<div class="h2-title">
-		<h2 class="h2-show"><%= @post.title %></h2>
-	</div>
-	<div class="show-pic">
 		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
+	</div>
+	<div >
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-3387068696014466";
+		/* curisn bro bottom */
+		google_ad_slot = "2013051388";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
 	</div>
 	<div class="show-user">
 		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
@@ -73,7 +87,13 @@
     		<span><strong>Only you can see this</strong></span>
   		<% end %>
 	</div>
-	
-
+	<script src="http://knowd.com/w/1926.js?swid=520"></script>
+	<!-- Classic, created 06/23/13 -->
+<div id="wahohabC3oSs"></div>
+<script type="text/javascript" src="http://wahoha.com/widget/bC3oSs"></script>
+<!-- end -->
+<div style="margin: 5px auto; width: 464px" >
+<div class="fb-comments" style="margin: 5px auto" data-href=<%= post_url(@post) %> data-width="470" data-num-posts="10"></div>
+</div>
 </div>
 </div>
