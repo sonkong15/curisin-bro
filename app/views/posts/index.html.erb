@@ -56,7 +56,7 @@
 			</div>
 		</div>
 	<% @posts.each do |post| %>
-<table class=<%=cycle("post-table", "post-table2", "post-table3" )%>>
+<table class="post-table">
 	<CAPTION><h3><%= post.title %></h3></CAPTION>
 <tr>
 <td><%= link_to image_tag(post.picture.url(:large)), post %></td>
@@ -72,9 +72,7 @@
 </table>
 <% end %>
 <%= paginate @posts %>
-<div class="line-ad">
-	
-	</div>
+
 	<div class="bottom-ad">
 		<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-3387068696014466";
