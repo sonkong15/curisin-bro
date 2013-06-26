@@ -150,11 +150,12 @@ caption{
 	border: 1px solid black;
 	width: 728px;
 	height: 90px;
-	margin: 10px 0px 0px 65px;
+	margin: 10px 0px 0px 188px;
 }
 .pshow-main{
+	background-color: rgb(38, 124, 233);
 	height: 103px;
-	margin: 0px 0% 0% 30%;
+	border-bottom: 3px solid white;
 }
 .h2-title{
 	width: 800px; 
@@ -391,16 +392,27 @@ background-image: -webkit-gradient(
 .post-tag{
 	display: table-row-group;
 }
+.moneymaker{
+	width: 800px;
+	background-color: #B3B3B3;
+	-webkit-box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+	-moz-box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+	box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+}
 .post-text{
 	margin-top: 25px;
 	width: 800px;
 	min-height: 110px;
 	background-color: #DDD;
+	-webkit-box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+	-moz-box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+	box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.66);
+
 }
 .mainmain{
 	width: 100%;
 	border-top: 3px solid white;
-	background-color: white;
+	background-color: black;
 }
 .sidead{
 	float: left;

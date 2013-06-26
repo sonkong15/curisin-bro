@@ -1,6 +1,7 @@
 <% provide(:title, @post.title)%>
 <div class="mainmain">
 <div class="pshow-main">
+	<div style="width: 1060px; margin: 0px auto">
 	<div class="up-ad">
 		<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-3387068696014466";
@@ -14,7 +15,7 @@
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 	</div>
-		
+		</div>
 </div>
 
 <div class="main2-show">
@@ -47,7 +48,8 @@
 		</div>		
 		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
 	</div>
-	<div >
+	<div class="moneymaker">
+		<div style="margin-left: 40px">
 		<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* cruisin bro-bottom */
@@ -59,6 +61,7 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+</div>
 	</div>
 	<div class="show-user">
 		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
@@ -87,8 +90,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     		<span><strong>Only you can see this</strong></span>
   		<% end %>
 	</div>
+	<div style="margin-left: 93px;">
 	<script src="http://knowd.com/w/1926.js?swid=520"></script>
-	<!-- MarketGidNews Start -->
+
+
+
+	<!-- Classic, created 06/23/13 -->
+<div id="wahohabC3oSs"></div>
+<script type="text/javascript" src="http://wahoha.com/widget/bC3oSs"></script>
+<!-- end -->
+<!-- MarketGidNews Start -->
 <div id="MarketGidScriptRootN984" class="news-block-magick">
 <div id="MarketGidPreloadN984">
 <a id="mg_add984" href="http://usr.mgid.com/demo/goods/?utm_source=widget&utm_medium=text&utm_campaign=add" target="_blank">Place your ad here</a><br> <a href="http://mgid.com/" target="_blank">Loading...</a> 
@@ -102,13 +113,9 @@ var s=iw[ce]('script');s.async='async';s.defer='defer';s.charset='utf-8';s.src="
 </script>
 </div>
 <!-- MarketGidNews End -->
-
-	<!-- Classic, created 06/23/13 -->
-<div id="wahohabC3oSs"></div>
-<script type="text/javascript" src="http://wahoha.com/widget/bC3oSs"></script>
-<!-- end -->
 <div style="margin: 5px auto; width: 464px" >
 <div class="fb-comments" style="margin: 5px auto" data-href=<%= post_url(@post) %> data-width="470" data-num-posts="10"></div>
+</div>
 </div>
 </div>
 </div>
