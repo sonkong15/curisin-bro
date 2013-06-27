@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 	end
 	def show
 		@post = Post.find(params[:id])
+		@posts = Post.order("RANDOM()").limit(4)
 		
 	end
 	def create

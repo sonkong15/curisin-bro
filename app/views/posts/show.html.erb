@@ -19,7 +19,30 @@
 </div>
 
 <div class="main2-show">
-	
+	<div class="sidebar-show">
+		<h3 class="titleforpics">Crazy and strange pics</h3>
+		<div class="posts-pics">
+			<div style="width: 320px;"><% @posts.map do |upload| %>
+			<table class="browse-show">
+				<tr>
+				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				</tr>
+				<tr class="showpageuploadrow">
+				<td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload %></td>
+			</tr>
+			</table>
+			<% end %> </div>
+
+			<h2><%= link_to "back to most recent posts", posts_url %></h2>
+			<br><br>
+			<div id="tag_cloud" style="width: 299px;">
+				<h3>search by Tags</h3>
+				<% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+				<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+				<% end %>
+ 
+			</div>
+		</div>
 	<div class="sidead">
 		<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-3387068696014466";
@@ -33,7 +56,7 @@
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 	</div>
-	
+	</div>
 	<div class="s-main">
 	<div class="h2-title">
 		<h2 class="h2-show"><%= @post.title %></h2>
@@ -49,7 +72,7 @@
 		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
 	</div>
 	<div class="moneymaker">
-		<div style="margin-left: 40px">
+		<div>
 		<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* cruisin bro-bottom */
@@ -90,7 +113,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     		<span><strong>Only you can see this</strong></span>
   		<% end %>
 	</div>
-	<div style="margin-left: 93px;">
+	<div style="margin-left: 296px;">
 	<script src="http://knowd.com/w/1926.js?swid=520"></script>
 
 
