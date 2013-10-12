@@ -23,6 +23,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
   gem 'devise'
+  gem "httparty", "~> 0.11.0"
   gem 'acts-as-taggable-on', '~> 2.3.1'
   gem "paperclip"
   gem 'bootstrap-sass', '~> 2.0.0'
@@ -42,6 +43,7 @@ end
 
 group :production do
   gem "thin"
+  gem "httparty", "~> 0.11.0"
   gem 'pg'
   gem 'devise'
   gem 'acts-as-taggable-on', '~> 2.3.1'
