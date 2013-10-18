@@ -15,19 +15,20 @@
 		<h3 class="titleforpics">Crazy and strange pics</h3>
 		<div class="posts-pics">
 			<script src="http://knowd.com/w/1926.js?swid=520"></script>
-			<div id="wahohad383jG"></div>
-<script type="text/javascript" src="http://wahoha.com/widget/d383jG"></script>
-<!-- end -->
-			<div style="width: 320px;"><% @posts.map do |upload| %>
+			<!-- Classic, created 07/28/13 -->
+  <div id="wahohad383jG"></div>
+  <script type="text/javascript" src="http://wahoha.com/widget/d383jG"></script>
+  <!-- end -->
+			<div style="width: 320px; "><%# @posts.map do |upload| %>
 			<table class="browse-show">
 				<tr>
-				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				<td ><%# link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
 				</tr>
 				<tr class="showpageuploadrow">
-				<td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload %></td>
+				<td class="for-font"><%# link_to truncate( upload.title, :length => 25), upload %></td>
 			</tr>
 			</table>
-			<% end %> </div>
+			<%# end %> </div>
 
 			<h2><%= link_to "back to most recent posts", posts_url %></h2>
 			<br><br>
@@ -62,7 +63,13 @@
 		</div>		
 		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title,) %> 
 	</div>
-	<div class="moneymaker">
+	
+	<div class="show-user">
+		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
+	</div>
+	<div class="show-text">
+		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
+		<div class="moneymaker" style="margin-top: 55px">
 			 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
 /* Help */
@@ -78,12 +85,6 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 		<!-- curisn bro bottom -->
 </div>
 	</div>
-	<div class="show-user">
-		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
-	</div>
-	<div class="show-text">
-		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
-		
 	</div>
 		<span class='st_facebook_vcount' displayText='Facebook'></span>
 		<span class='st_stumbleupon_vcount' displayText='StumbleUpon'></span>

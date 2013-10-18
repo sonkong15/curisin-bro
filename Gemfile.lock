@@ -247,6 +247,7 @@ DEPENDENCIES
   devise
   friendly_id (~> 4.0.1)
   guard-rspec
+  httparty (~> 0.11.0)
   jquery-rails
   kaminari
   oauth2
