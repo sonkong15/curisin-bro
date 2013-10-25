@@ -10,6 +10,9 @@ resources :posts
   match "/contact", to:"static_pages#contact"
   match "/terms", to:"static_pages#terms"
   match "/privacy", to:"static_pages#privacy"
+  match "/known", to: "static_pages#known"
+  match "/wahoha", to: "static_pages#wahoha"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

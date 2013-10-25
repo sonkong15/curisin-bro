@@ -18,4 +18,11 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+  def knowed
+    
+  end
+  
+  def wahoha
+    
+  end
 end
