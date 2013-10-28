@@ -71,7 +71,7 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 
 			</ul>
 		</div>		
-		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title, :style => "width: 300px;") %> 
+		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title, :style => "width: 435px;") %> 
 	</div>
 	
 	<div class="show-user">
@@ -79,7 +79,8 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 	</div>
 	<div class="show-text">
 		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
-		<div class="moneymaker" style="margin-top: 55px">
+		<div class="moneymaker" style=" margin-top: 45px;
+">
 			 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
 /* Help */
