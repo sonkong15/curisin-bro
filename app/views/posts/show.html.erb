@@ -39,8 +39,9 @@
 	<% end %>
 	</div>
 	<div class="s-main">
+		<div class="playtowin" ><%= link_to image_tag("pikcamgame.jpg", :alt => "humorous pictures and lol photos"), "http://www.pikcam.com/play-and-win", :title => "humorous pictures and lol photos" %>  </div>
 	<div class="h2-title">
-		<h2 class="h2-show"><%= @post.title %></h2>
+		<h2 class="h2-show"><%= @post.link.present? ? @post.link : @post.title %></h2>
 	</div>
 	<div style="width: 728px; background-color: black;">
 		<!--<h2><script language="JavaScript">document.write(geoip_city())</script> <script language="JavaScript">document.write(geoip_region_name());</script></h2>-->
