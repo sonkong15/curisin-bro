@@ -5,7 +5,7 @@
 </div>-->
 
 <div class="main2-show">
-	<div class="sidebar-show">
+	<div class="sidebar-show" style="margin-top: 108px;">
 		<h3 class="titleforpics">Crazy and strange pics</h3>
 		<div class="posts-pics">
 			<script src="http://knowd.com/w/1926.js?swid=520"></script>
@@ -39,12 +39,6 @@
 	<% end %>
 	</div>
 	<div class="s-main">
-		<div class="playtowin" ><%= link_to image_tag("pikcamgame.jpg", :alt => "humorous pictures and lol photos"), "http://www.pikcam.com/play-and-win", :title => "humorous pictures and lol photos", :target =>"_blank" %>  </div>
-	<div class="h2-title">
-		<h2 class="h2-show"><%= @post.link.present? ? @post.link : @post.title %></h2>
-	</div>
-	<div style="width: 728px; background-color: black;">
-		<!--<h2><script language="JavaScript">document.write(geoip_city())</script> <script language="JavaScript">document.write(geoip_region_name());</script></h2>-->
 		<div class="sidead2">
  <script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
@@ -59,10 +53,16 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 	</div>
 
+	<div class="h2-title">
+		<h2 class="h2-show"><%= @post.link.present? ? @post.link : @post.title %></h2>
+	</div>
+	<div style="width: 728px; background-color: black;">
+		<!--<h2><script language="JavaScript">document.write(geoip_city())</script> <script language="JavaScript">document.write(geoip_region_name());</script></h2>
+		<div class="playtowin" ><%# link_to image_tag("pikcamgame.jpg", :alt => "humorous pictures and lol photos"), "http://www.pikcam.com/play-and-win", :title => "humorous pictures and lol photos", :target =>"_blank" %>  </div>-->
 	</div>
 	<div class="show-pic">
 		<div class="next-buttom">
-			<ul style="margin-top: 111px;">
+			<ul style="margin-top: 0px;">
 				<li class="next-box"><%= link_to("Previous Pic", @post.next_upload, :class => "")  if @post.next_upload %></li>
 				<li class="next-box"><%= link_to("Next Pic", @post.previous_upload,:class => "") if @post.previous_upload %></li>
 
@@ -76,7 +76,7 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 	</div>
 	<div class="show-text">
 		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
-		<div class="moneymaker" style=" margin-top: 15px;
+		<div class="moneymaker" style=" margin-top: 25px;
 ">
 			 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
