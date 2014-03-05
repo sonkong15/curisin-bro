@@ -5,7 +5,7 @@
 </div>-->
 
 <div class="main2-show">
-	<div class="sidebar-show" style="margin-top: 108px;">
+	<div class="sidebar-show" style="margin-top: 0px;">
 		<h3 class="titleforpics">Crazy and strange pics</h3>
 		<div class="posts-pics">
 			<script src="http://knowd.com/w/1926.js?swid=520"></script>
@@ -40,8 +40,8 @@
 	</div>
 	<div class="s-main">
 		<div class="sidead2">
-			<a href="http://www.pikcam.com/uploads/1126" target="_blank"><img style="width: 25%;" src="http://thechive.files.wordpress.com/2011/10/a-chicks-crazy-12.jpg"></a>
-			<a href="http://donloren.com/photos/10" target="_blank"><img style="width: 25%;" src="http://s3.amazonaws.com/triumff/10/large.jpg?1377310194"></a>
+			<!--<a href="http://www.pikcam.com/uploads/1126" target="_blank"><img style="width: 25%;" src="http://thechive.files.wordpress.com/2011/10/a-chicks-crazy-12.jpg"></a>
+			<a href="http://donloren.com/photos/10" target="_blank"><img style="width: 25%;" src="http://s3.amazonaws.com/triumff/10/large.jpg?1377310194"></a>-->
 	</div>
 
 	<div class="h2-title">
@@ -61,20 +61,8 @@
 		</div>		
 		<%= image_tag(@post.picture.url(:large), :title => @post.title, :alt => @post.title, :style => "width: 450px;") %> 
 	</div>
-	
-	<div class="show-user">
-		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
-	</div>
-	<div class="show-text">
-		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
-		<div class="moneymaker" style=" margin-top: 25px; margin-bottom: 20px;">
-
-		<div>
-		<!-- curisn bro bottom -->
-</div>
-	</div>
-	</div>
-		<span class='st_facebook_vcount' displayText='Facebook'></span>
+	<p>
+	<span class='st_facebook_vcount' displayText='Facebook'></span>
 		<span class='st_stumbleupon_vcount' displayText='StumbleUpon'></span>
 		<span class='st_tumblr_vcount' displayText='Tumblr'></span>
 		<span class='st_reddit_vcount' displayText='Reddit'></span>
@@ -82,6 +70,32 @@
 		<span class='st_digg_vcount' displayText='Digg'></span>
 		<span class='st_twitter_vcount' displayText='Tweet'></span>
 		<span class='st_pinterest_vcount' displayText='Pinterest'></span>
+		</p>
+	<div class="show-user">
+		<h4> Profile: <%= @post.user.name.capitalize %> | link: <a href= "http://<%= @post.link %> " target = "_blank"><%= @post.link %></a></h4>
+	</div>
+	
+	<div class="show-text">
+
+		<h4>Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></h4>
+		<div class="moneymaker" style=" margin-top: 25px; margin-bottom: 20px;">
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4775541808664529";
+/* Help */
+google_ad_slot = "8256953892";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+		<div>
+		<!-- curisn bro bottom -->
+</div>
+	</div>
+	</div>
 	<div class="post-text">
 		<h2> Description: </h2>
 		<h4><%= @post.text %></h4>
